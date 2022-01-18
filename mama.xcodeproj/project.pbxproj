@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E59585927865BEB0065E131 /* StartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E59585827865BEB0065E131 /* StartController.swift */; };
+		8E59585B278664CA0065E131 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E59585A278664CA0065E131 /* ProgressBar.swift */; };
+		8E59585D278668B80065E131 /* FinalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E59585C278668B80065E131 /* FinalController.swift */; };
 		8EAD4A48271FBCCD00F7324D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAD4A47271FBCCD00F7324D /* AppDelegate.swift */; };
 		8EAD4A4A271FBCCD00F7324D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAD4A49271FBCCD00F7324D /* SceneDelegate.swift */; };
 		8EAD4A4C271FBCCD00F7324D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAD4A4B271FBCCD00F7324D /* ViewController.swift */; };
@@ -16,10 +19,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8E59585827865BEB0065E131 /* StartController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartController.swift; sourceTree = "<group>"; };
+		8E59585A278664CA0065E131 /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
+		8E59585C278668B80065E131 /* FinalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalController.swift; sourceTree = "<group>"; };
 		8EAD4A44271FBCCD00F7324D /* mama.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mama.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EAD4A47271FBCCD00F7324D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8EAD4A49271FBCCD00F7324D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8EAD4A4B271FBCCD00F7324D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8EAD4A4B271FBCCD00F7324D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; usesTabs = 0; };
 		8EAD4A4E271FBCCD00F7324D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8EAD4A50271FBCCF00F7324D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8EAD4A53271FBCCF00F7324D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -63,6 +69,9 @@
 				8EAD4A50271FBCCF00F7324D /* Assets.xcassets */,
 				8EAD4A52271FBCCF00F7324D /* LaunchScreen.storyboard */,
 				8EAD4A55271FBCCF00F7324D /* Info.plist */,
+				8E59585827865BEB0065E131 /* StartController.swift */,
+				8E59585A278664CA0065E131 /* ProgressBar.swift */,
+				8E59585C278668B80065E131 /* FinalController.swift */,
 			);
 			path = mama;
 			sourceTree = "<group>";
@@ -140,6 +149,9 @@
 			files = (
 				8EAD4A4C271FBCCD00F7324D /* ViewController.swift in Sources */,
 				8EAD4A48271FBCCD00F7324D /* AppDelegate.swift in Sources */,
+				8E59585D278668B80065E131 /* FinalController.swift in Sources */,
+				8E59585927865BEB0065E131 /* StartController.swift in Sources */,
+				8E59585B278664CA0065E131 /* ProgressBar.swift in Sources */,
 				8EAD4A4A271FBCCD00F7324D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,11 +299,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8F2G8MA5WC;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = mama/Info.plist;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "This app uses the microphone to recognize speech";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "This app uses speech recognition for the function of the game";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -304,6 +319,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tenself.mama;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -315,11 +331,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8F2G8MA5WC;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = mama/Info.plist;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "This app uses the microphone to recognize speech";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "This app uses speech recognition for the function of the game";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -332,6 +351,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tenself.mama;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
